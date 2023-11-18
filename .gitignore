@@ -1,0 +1,10 @@
+*.wem
+*.wav
+*.bnk
+*.bnk.xml
+
+# Things that are likely in the same location
+bg3-modders-multitool/
+vgmstream/
+wwiser.pyz
+wwnames.db3

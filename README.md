@@ -24,20 +24,22 @@ You will need to download/install a few things to make this work.
 
 ## Usage
 
-1. Open the Modders Multitool
+1. Ensure you check this project out in a path with *no spaces* in the name
+   - This project is currently sensitive to this, and having spaces in any paths will mean it doesn't work.
+2. Open the Modders Multitool
    - Make sure you have your game path set correctly. This can be confirmed by opening the Configuration dialog from thetop menu.
-2. In the top menu, select `Utilities` > `Game File Operations` > `Unpack Game Files`.
-3. Select `SharedSoundBanks.pak` and `SharedSounds.pak` and confirm.
-4. Wait for the unpacking to complete.
-5. Back in this project, change the constants in `categoriser.py`
+3. In the top menu, select `Utilities` > `Game File Operations` > `Unpack Game Files`.
+4. Select `SharedSoundBanks.pak` and `SharedSounds.pak` and confirm.
+5. Wait for the unpacking to complete.
+6. Back in this project, change the constants in `categoriser.py`
    - `wwizer_pyz` should be the path of the `wwiser.pyz` you downloaded.
    - `folder_vgmstream` should be the folder you extracted vgmstream to.
-   - `folder_banks` should be the `UnpackedData\SharedSoundBanks\Public\Shared\Assets\Sound` folder in your BG3 Modders Multitool location.
-   - `folder_audio_raw` should be the `UnpackedData\SharedSounds\Public\Shared\Assets\Sound` folder in your BG3 Modders Multitool location.
+   - `folder_unpacked_data` should be the `UnpackedData` folder in your BG3 Modders Multitool location.
    - `folder_audio_converted` should be the folder where you want your final files to be.
-6. Run `python categoriser.py`
+7. If you want the files renamed to more human-friendly names, check the advanced section.
+8. Run `python categoriser.py`
    - This will take some time, so go off and enjoy your life while it does its thing.
-7. Your audio files will be categorised in the converted folder.
+9. Your audio files will be categorised in the converted folder.
    - The file names will be numbers, not human friendly names. If you are looking for something specific, then you will need to sort through them manually.
 
 ## Future plans

@@ -42,6 +42,25 @@ You will need to download/install a few things to make this work.
 9. Your audio files will be categorised in the converted folder.
    - The file names will be numbers, not human friendly names. If you are looking for something specific, then you will need to sort through them manually.
 
+### Advanced: Renaming
+
+> [!NOTE]
+> These steps require [wsl](https://learn.microsoft.com/en-us/windows/wsl/), or some other way of using Linux, as you will be dealing with file paths that are invalid in Windows.
+
+This step uses the [bg3-sids wiki](https://github.com/HumansDoNotWantImmortality/bg3-sids/wiki) by HumansDoNotWantImmortality.
+
+1. In `wsl`, clone `https://github.com/HumansDoNotWantImmortality/bg3-sids.wiki.git`. 
+   - If you accidentally run this in Windows, you'll find that it can't check any of the files out. Open `wsl` and run `git checkout master` to actually check out the files.
+2. In `wsl`, run the following script in that project to make the file names valid in Windows.
+   ```sh
+   for file in *; do
+     new_file=$(echo "$file" | sed 's/[\\&]/_/g')
+     mv "$file" "$new_file"
+   done
+   ```
+3. Back in this project, set `should_rename` to True and `folder_bg3sids_wiki` to the path you cloned the wiki to.
+4. Switch back to Windows to run the Python script.
+
 ## Future plans
 
 - None. I'll only revisit this if I need to mess with more audio files.

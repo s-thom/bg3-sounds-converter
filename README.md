@@ -24,7 +24,7 @@ You will need to download/install a few things to make this work.
 
 ## Usage
 
-1. Ensure you check this project out in a path with *no spaces* in the name
+1. Ensure you check this project out in a path with _no spaces_ in the name
    - This project is currently sensitive to this, and having spaces in any paths will mean it doesn't work.
 2. Open the Modders Multitool
    - Make sure you have your game path set correctly. This can be confirmed by opening the Configuration dialog from thetop menu.
@@ -32,7 +32,7 @@ You will need to download/install a few things to make this work.
 4. Select `SharedSoundBanks.pak` and `SharedSounds.pak` and confirm.
 5. Wait for the unpacking to complete.
 6. Back in this project, change the constants in `categoriser.py`
-   - `wwizer_pyz` should be the path of the `wwiser.pyz` you downloaded.
+   - `wwiser_pyz` should be the path of the `wwiser.pyz` you downloaded.
    - `folder_vgmstream` should be the folder you extracted vgmstream to.
    - `folder_unpacked_data` should be the `UnpackedData` folder in your BG3 Modders Multitool location.
    - `folder_audio_converted` should be the folder where you want your final files to be.
@@ -49,7 +49,7 @@ You will need to download/install a few things to make this work.
 
 This step uses the [bg3-sids wiki](https://github.com/HumansDoNotWantImmortality/bg3-sids/wiki) by HumansDoNotWantImmortality.
 
-1. In `wsl`, clone `https://github.com/HumansDoNotWantImmortality/bg3-sids.wiki.git`. 
+1. In `wsl`, clone `https://github.com/HumansDoNotWantImmortality/bg3-sids.wiki.git`.
    - If you accidentally run this in Windows, you'll find that it can't check any of the files out. Open `wsl` and run `git checkout master` to actually check out the files.
 2. In `wsl`, run the following script in that project to make the file names valid in Windows.
    ```sh

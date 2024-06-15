@@ -11,7 +11,7 @@ should_group = True
 should_rename = False
 
 # Make sure to escape backslahes! (i.e. replace `\` with `\\`)
-wwizer_pyz = ""
+wwiser_pyz = ""
 folder_vgmstream = ""
 folder_unpacked_data = ""
 folder_audio_converted = ""
@@ -48,7 +48,7 @@ def decode_banks(source_dir: str):
     print(f"\r  {bank_index}/{total}", end="", flush=True)
     for bank in banks:
         subprocess.call(
-            f"python {wwizer_pyz} -d xsl {bank}",
+            f"python {wwiser_pyz} -d xsl {bank}",
             shell=True,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,

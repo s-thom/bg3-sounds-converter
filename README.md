@@ -14,6 +14,8 @@ You will need to download/install a few things to make this work.
 - [Python 3](https://www.python.org/)
   - Used to run this script.
   - Install how you would normally install Python, The Windows Installer from [the website](https://www.python.org/downloads/) is a good choice if you don't know what to do.
+  - Run `python --version` to check that Windows doesn't have the broken alias enabled.
+    - If it does, then search Settings for "app execution aliases" and disable the entries for `python.exe` and `python3.exe`.
 - [vgmstream](https://github.com/vgmstream/vgmstream)
   - Used to convert the `.wem` files to `.wav` so audio players can play them.
   - Download the latest release from [the builds website](https://vgmstream.org/) and extract the folder somewhere.

@@ -30,8 +30,11 @@ def convert_wem_folder(source_dir: str, dest_dir: str):
     for wem in wems:
         _, filename = os.path.split(wem)
         subprocess.call(
-            f"vgmstream-cli -o {dest_dir}\\{filename}.wav {source_dir}\\{filename}",
-            shell=True,
+            [ "vgmstream-cli",
+                "-o",
+                os.path.join(dest_dir, f"{filename}.wav"),
+                os.path.join(source_dir, filename),
+            ],
             stdout=subprocess.DEVNULL,
         )
         wem_index = wem_index + 1
@@ -48,8 +51,7 @@ def decode_banks(source_dir: str):
     print(f"\r  {bank_index}/{total}", end="", flush=True)
     for bank in banks:
         subprocess.call(
-            f"python {wwiser_pyz} -d xsl {bank}",
-            shell=True,
+            [ "python", wwiser_pyz, "-d", "xsl", bank ],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
